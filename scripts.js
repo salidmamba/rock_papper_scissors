@@ -10,11 +10,11 @@ function function1(){
 let randy = Math.random();
 let computerGame = '';
 if(randy>= 0 && randy<=1/3){
-    computerGame ='Rock';
+    computerGame ='rock';
 }else if(randy>=1/3 && randy<=2/3){
-    computerGame= 'Paper';
+    computerGame= 'paper';
  }else if(randy >=2/3 && randy <=1){
-     computerGame= 'Scissors';
+     computerGame= 'scissors';
 }
 return computerGame;
 }
@@ -24,29 +24,29 @@ computerGame = function1();
 let board = '';
 if (myMove === 'rock'){
             
-    if(computerGame === 'Rock'){
+    if(computerGame === 'rock'){
         board = 'Tie';
-    }else if(computerGame === 'Paper'){
+    }else if(computerGame === 'paper'){
         board = 'Oops! You loose';
-    }else if(computerGame === 'Scissors'){
+    }else if(computerGame === 'scissors'){
         board = 'Hurray! You Win';
     }
 
 }else if(myMove ==='paper'){
-    if(computerGame === 'Rock'){
+    if(computerGame === 'rock'){
         board = 'Hurray! You Win';
-    }else if(computerGame === 'Paper'){
+    }else if(computerGame === 'paper'){
         board = 'Tie';
-    }else if(computerGame === 'Scissors'){
+    }else if(computerGame === 'scissors'){
         board = 'Oops! You loose';
     }
 
 }else if(myMove==='scissors'){
-    if(computerGame === 'Rock'){
+    if(computerGame === 'rock'){
         board ='Oops! You loose';
-    }else if(computerGame === 'Paper'){
+    }else if(computerGame === 'paper'){
         board ='Hurray! You Win';
-    }else if(computerGame === 'Scissors'){
+    }else if(computerGame === 'scissors'){
         board ='Tie';
     }
 }
@@ -63,7 +63,7 @@ if(board === 'Hurray! You Win'){
 
 
 localStorage.setItem('boardScore', JSON.stringify(score));
-document.querySelector('.js-moves').innerHTML = `You<img src="/img/${myMove}-emoji.png" class="rocker"> <img src="/img/${computerGame}-emoji.png" class="rocker">Computer`;
+document.querySelector('.js-moves').innerHTML = `You<img src="img/${myMove}-emoji.png" class="rocker"> <img src="img/${computerGame}-emoji.png" class="rocker">Computer`;
 document.querySelector('.js-result').innerHTML = board;
 updateJsScore(); // Call the updateJsScore function to update the score display.
 }
