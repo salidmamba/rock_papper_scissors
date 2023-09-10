@@ -63,7 +63,7 @@ if(board === 'Hurray! You Win'){
 
 
 localStorage.setItem('boardScore', JSON.stringify(score));
-document.querySelector('.js-moves').innerHTML = `You<img src="img/${myMove}-emoji.png" class="rocker"> <img src="img/${computerGame}-emoji.png" class="rocker">Computer`;
+document.querySelector('.js-moves').innerHTML = `You<img src="/img/${myMove}-emoji.png" class="rocker"> <img src="/img/${computerGame}-emoji.png" class="rocker">Computer`;
 document.querySelector('.js-result').innerHTML = board;
 updateJsScore(); // Call the updateJsScore function to update the score display.
 }
